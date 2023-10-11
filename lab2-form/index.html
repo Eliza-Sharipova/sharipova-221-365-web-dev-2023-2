@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-wigth">
+        <title>форма</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Форма обратной связи</h1>
+        <form action="http://httpbin.org/post" method="post">
+            <fieldset>
+            <div class="form-group">
+                <label for="fio">ФИО</label>
+                <input type="text" id="fio" name="fio" placeholder="Введите ФИО"  required>
+            </div>
+            <div class="form-group">
+                <label for="email">Почта</label>
+                <input type="email" id="email" name="email" placeholder="Введите почту" required>
+            </div>
+            </fieldset>
+            <fieldset>
+                <legend>Категория обращения</legend>
+                <select name="type" id="type">
+                    <option value="negative">Жалоба</option>
+                    <option value="positiv">Благодарность</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Как Вы узнали о нас?</legend>
+                <div class="form-group">
+                    <input type="radio" name="source" id="tv">
+                    <label for="tv">ТВ</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="source" id="fr">
+                    <label for="fr">Друзья</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="source" id="adv">
+                    <label for="adv">Реклама</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Текст сообщения</legend>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Вложение</legend>
+                <input type="file" name="file" id="file">
+            </fieldset>
+            <div class="form-group">
+                <input type="checkbox" name="agree" id="agree">
+                <label for="email">Даю согласие на обработку персональных данных</label>
+            </div>
+            
+            <input type="submit" class="btn" value="Отправить">
+        </form>
+    </body>
+</html>
